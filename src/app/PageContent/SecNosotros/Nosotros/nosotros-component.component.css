@@ -1,0 +1,75 @@
+:host {
+    --surgir-wine: #7b1a40;
+    /* El tono guinda/vino del título */
+    --surgir-red: #ec0000;
+    --text-dark: #333333;
+}
+
+/* --- Hero Banner --- */
+.hero-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+        #ec0000 url('/assets/img/hero-staff.jpg') no-repeat center center;
+    background-size: cover;
+    height: 450px;
+    /* Ajustable según necesidad */
+    width: 100%;
+    position: relative;
+}
+
+.hero-title {
+    color: white;
+    font-weight: 700;
+    font-size: 2.8rem;
+    max-width: 600px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Sección Quiénes Somos --- */
+.section-container {
+    margin-top: 2rem;
+}
+
+.title-red {
+    color: var(--surgir-wine);
+    font-weight: 700;
+    font-size: 2rem;
+    position: relative;
+}
+
+.description-text {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.image-wrapper img {
+    width: 100%;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.02);
+}
+
+/* --- Responsividad --- */
+@media (max-width: 991px) {
+    .hero-banner {
+        height: 300px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+        padding-bottom: 20px;
+    }
+
+    .title-red {
+        font-size: 1.6rem;
+    }
+
+    .description-text {
+        font-size: 1rem;
+    }
+}

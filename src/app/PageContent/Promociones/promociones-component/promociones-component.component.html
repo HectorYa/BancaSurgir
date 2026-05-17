@@ -1,0 +1,68 @@
+<div class="container-fluid bg-light-blue py-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-md-6 text-section">
+                <h1 class="fw-bold display-5 text-dark-blue">
+                    ¡Participa de todas nuestras promociones!
+                </h1>
+                <p class="lead fs-5 text-secondary">
+                    Conoce el detalle de cada promoción y gana con SURGIR.
+                </p>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-center">
+                <div class="custom-blob-container">
+                    <img src="assets/tu-imagen.jpg" alt="Promociones Surgir" class="img-fluid blob-mask">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container py-5">
+        <h2 class="fw-bold mb-4">Encuentra todas nuestras promociones</h2>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col" *ngFor="let promo of promociones">
+                <div class="card h-100 border-0 shadow-sm custom-card">
+                    <div class="row g-0 h-100">
+
+                        <div class="col-5">
+                            <img [src]="promo.imagen" class="img-fluid rounded-start h-100 object-fit-cover"
+                                [alt]="promo.titulo">
+                        </div>
+
+                        <div class="col-7">
+                            <div class="card-body d-flex flex-column h-100 justify-content-center">
+                                <h5 class="card-title fw-bold fs-6">{{ promo.titulo }}</h5>
+                                <p class="card-text text-muted small mb-3">{{ promo.vigencia }}</p>
+
+                                <div class="d-flex align-items-center gap-3">
+                                    <button *ngIf="promo.btnPrincipal" class="btn btn-red btn-sm px-4 rounded-pill">
+                                        {{ promo.btnPrincipal }}
+                                    </button>
+                                    <a href="#" class="text-danger fw-bold small text-decoration-none">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation" class="mt-5">
+            <ul class="pagination justify-content-end align-items-center">
+                <li class="page-item disabled"><a class="page-link border-0 text-muted">
+                        < Anterior</a>
+                </li>
+                <li class="page-item active"><a class="page-link rounded-circle mx-1">1</a></li>
+                <li class="page-item"><a class="page-link border-0 text-dark" href="#">2</a></li>
+                <li class="page-item"><a class="page-link border-0 text-dark" href="#">3</a></li>
+                <li class="page-item"><span class="mx-2">...</span></li>
+                <li class="page-item"><a class="page-link border-0 text-dark" href="#">9</a></li>
+                <li class="page-item"><a class="page-link border-0 text-info fw-bold" href="#">Siguiente ></a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

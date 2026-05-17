@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+/* VARIABLES */
+:root {
+    /* MODO CLARO TOTAL */
+    --bg-color: #f8fafc;
+    --bg-gradient: radial-gradient(circle at center, #ffffff 0%, #f1f5f9 100%);
+    --text-main: #1e293b;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    /* Un poco de transparencia */
+    --card-border: #e2e8f0;
+    --glow: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] {
+    /* MODO OSCURO TOTAL (Fiel a tu imagen) */
+    --bg-color: #0f172a;
+    /* Este gradiente imita las luces sutiles de la imagen original */
+    --bg-gradient: radial-gradient(circle at 80% 20%, #1e293b 0%, #0f172a 100%);
+    --text-main: #ffffff;
+    --card-bg: #1e293b;
+    --card-border: #334155;
+    --glow: rgba(236, 0, 0, 0.4);
+    /* El resplandor rojo de la imagen */
+}
+
+/* APLICACIÓN AL BODY */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--text-main);
+    transition: background 0.3s ease, color 0.3s ease;
+}

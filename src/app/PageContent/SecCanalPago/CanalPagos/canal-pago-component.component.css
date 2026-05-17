@@ -1,0 +1,203 @@
+/* Tipografías y Colores Generales */
+.title-main {
+    color: #9d3063;
+    font-weight: 700;
+}
+
+.subtitle-main {
+    color: #444;
+    font-size: 1.1rem;
+}
+
+/* Tarjetas de Bancos */
+.bank-card {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.bank-card:hover {
+    transform: translateY(-5px);
+}
+
+.bank-card img {
+    max-width: 70%;
+}
+
+/* Colores de Fondo de Bancos */
+.yape-bg {
+    background: linear-gradient(135deg, #742384, #8b2c9b);
+}
+
+.bcp-bg {
+    background: #002a8d;
+}
+
+.banbif-bg {
+    background: linear-gradient(135deg, #5fc3e4, #48a1cf);
+}
+
+.interbank-bg {
+    background: #00ab4e;
+}
+
+.kasnet-bg {
+    background: #3d4a99;
+}
+
+/* Banner de Selección */
+.selected-channel-banner {
+    background-color: #742384;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Tarjeta de Información */
+.info-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.link-custom {
+    color: #008494;
+    font-weight: 500;
+}
+
+.detail-list li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #333;
+    display: flex;
+    align-items: flex-start;
+}
+
+.detail-list li i {
+    color: #e30613;
+    /* Rojo institucional */
+    font-size: 0.8rem;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+/* Botón flotante */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #a00000;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Banners de los bancos */
+.bank-banner {
+    height: 100px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bcp-banner {
+    background: linear-gradient(to bottom, #0051b5, #002a8d);
+}
+
+.banbif-banner {
+    background: linear-gradient(to right, #5fc3e4, #7f7fd5);
+}
+
+.bank-banner img {
+    max-height: 40px;
+}
+
+/* Personalización del Acordeón */
+.custom-accordion .accordion-item {
+    border: 1px solid #ced4da !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+.custom-accordion .accordion-button {
+    background-color: white !important;
+    color: #333;
+    font-weight: 500;
+    padding: 1.2rem;
+    box-shadow: none !important;
+}
+
+/* Icono de la flecha en rojo y a la derecha */
+.custom-accordion .accordion-button::after {
+    filter: invert(13%) sepia(91%) saturate(5437%) hue-rotate(352deg) brightness(96%) contrast(106%);
+    /* Esto convierte el icono de Bootstrap a color rojo similar a tu imagen */
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    color: #000;
+    border-bottom: 1px solid #eee;
+}
+
+.custom-accordion .accordion-header i {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+/* Botón flotante rojo inferior */
+.btn-float-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #8b0000;
+    color: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Colores específicos de los nuevos banners */
+.interbank-banner {
+    background-color: #00bf4b;
+    /* Verde característico de Interbank */
+}
+
+.kasnet-banner {
+    background-color: #4c49b6;
+    /* Azul/Violeta de KasNet */
+}
+
+/* Ajuste fino para los iconos de los acordeones */
+.custom-accordion .accordion-button i {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+/* Estilo para el separador horizontal entre secciones */
+hr {
+    border: 0;
+    border-top: 1px solid #dee2e6;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Efecto hover suave en los items del acordeón */
+.accordion-item:hover {
+    border-color: #adb5bd !important;
+    transition: border-color 0.3s ease;
+}

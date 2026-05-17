@@ -1,0 +1,136 @@
+/* Variables de color */
+:host {
+    --surgir-red: #ec0000;
+    --surgir-dark: #444444;
+    --surgir-yellow: #ffcc00;
+}
+
+/* Banner Superior */
+.top-banner {
+    background-color: var(--surgir-red);
+    color: white;
+    padding: 6px 0;
+    font-size: 0.85rem;
+}
+
+.santander-logo {
+    height: 18px;
+    vertical-align: middle;
+}
+
+.unete-link {
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+/* Navbar Principal */
+.navbar {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nav-link {
+    color: var(--surgir-dark) !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--surgir-red) !important;
+}
+
+/* Estilo para los dropdowns (flechas) */
+.dropdown-toggle::after {
+    border: none;
+    content: "\2304";
+    /* Icono de flecha simple */
+    vertical-align: middle;
+    margin-left: 4px;
+    font-size: 1.2rem;
+    line-height: 0;
+}
+
+/* Botón de búsqueda */
+.search-btn svg {
+    transition: transform 0.2s ease;
+}
+
+.search-btn:hover svg {
+    transform: scale(1.1);
+    fill: var(--surgir-red);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+
+    .nav-link {
+        padding: 10px 0 !important;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+/* Estilos para los enlaces dentro del Mega Menú */
+.mega-links li {
+    margin-bottom: 12px;
+}
+
+.mega-links li a {
+    text-decoration: none;
+    color: #444;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.mega-links li a:hover {
+    color: var(--surgir-red);
+}
+
+/* Ajuste para que el mega menú aparezca justo debajo del navbar */
+.navbar {
+    position: relative;
+    /* Asegura que el dropdown sepa dónde alinearse */
+}
+
+.nav-item.position-static .dropdown-menu {
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    border-radius: 0 0 15px 15px !important;
+}
+
+/* Efecto hover (opcional, si quieres que se abra al pasar el mouse) */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover>.dropdown-menu {
+        display: block;
+        animation: slideUp 0.3s ease;
+    }
+
+    /* Puente invisible para evitar que se cierre el menú al mover el mouse */
+    .nav-item.dropdown > .dropdown-menu::before {
+        content: '';
+        position: absolute;
+        top: -25px; /* Cubre el espacio vacío entre el link y el menú */
+        left: 0;
+        right: 0;
+        height: 25px;
+        background: transparent;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

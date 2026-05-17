@@ -1,0 +1,113 @@
+:host {
+    --santander-red: #ec0000;
+    --text-gray: #666;
+    --title-gray: #444;
+}
+
+.footer-container {
+    background-color: #fff;
+    color: var(--text-gray);
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+}
+
+.footer-title {
+    color: var(--title-gray);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--text-gray);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--santander-red);
+}
+
+.schedule {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+}
+
+.phone-number {
+    color: var(--title-gray);
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+/* Sección Institucional */
+.footer-divider {
+    opacity: 0.1;
+    margin: 0;
+}
+
+.institutional-links a {
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.institutional-links li {
+    border-color: #ddd !important;
+}
+
+/* Franja Roja */
+.legal-bar {
+    background-color: var(--santander-red);
+    color: white;
+    font-size: 0.75rem;
+}
+
+.legal-text p {
+    line-height: 1.4;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.social-icon:hover {
+    background: white;
+    color: var(--santander-red);
+}
+
+/* Botón Volver Arriba */
+.btn-back-to-top {
+    color: var(--title-gray);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .phone-number {
+        font-size: 1.2rem;
+    }
+
+    .institutional-links li {
+        border: none !important;
+        display: block;
+        margin-bottom: 10px;
+        padding-left: 0 !important;
+    }
+}
