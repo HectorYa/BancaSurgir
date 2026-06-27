@@ -1,5 +1,10 @@
 {
-  "framework": "angular",
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/banca-surgir"
+  "outputDirectory": "dist/banca-surgir/browser",
+  "installCommand": "npm install",
+  "framework": "angular",
+  "rewrites": [
+    { "source": "/assets/(.*)", "destination": "/assets/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
