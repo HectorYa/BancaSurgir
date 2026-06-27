@@ -1,25 +1,21 @@
 :host {
-    --surgir-wine: #7b1a40;
-    /* El tono guinda/vino del título */
-    --surgir-red: #ec0000;
-    --text-dark: #333333;
+    display: block;
 }
 
 /* --- Hero Banner --- */
 .hero-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-        #ec0000 url('/assets/img/hero-staff.jpg') no-repeat center center;
+        #ec0000 url('/assets/img/hero-about.png') no-repeat center center;
     background-size: cover;
     height: 450px;
-    /* Ajustable según necesidad */
     width: 100%;
     position: relative;
 }
 
 .hero-title {
     color: white;
-    font-weight: 700;
-    font-size: 2.8rem;
+    font-weight: 800;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
     max-width: 600px;
     line-height: 1.1;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -31,28 +27,56 @@
 }
 
 .title-red {
-    color: var(--surgir-wine);
-    font-weight: 700;
+    color: #7b1a40;
+    font-weight: 800;
     font-size: 2rem;
     position: relative;
 }
 
 .description-text {
-    color: var(--text-dark);
-    font-size: 1.1rem;
-    line-height: 1.6;
+    color: #334155;
+    font-size: 1.05rem;
+    line-height: 1.7;
     text-align: justify;
 }
 
 .image-wrapper img {
     width: 100%;
-    border-radius: 4px;
+    border-radius: 12px;
     transition: transform 0.3s ease;
 }
 
 .image-wrapper img:hover {
     transform: scale(1.02);
 }
+
+/* --- Logos Circle --- */
+.logo-circle-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-center {
+    position: absolute;
+    z-index: 2;
+}
+
+.logo-item {
+    position: absolute;
+    background: white;
+    padding: 10px 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-size: 0.85rem;
+}
+
+.item-1 { top: 10%; left: 10%; }
+.item-2 { top: 10%; right: 10%; }
+.item-3 { bottom: 10%; left: 50%; transform: translateX(-50%); }
 
 /* --- Responsividad --- */
 @media (max-width: 991px) {

@@ -1,33 +1,35 @@
 /* Tipografías y Colores Generales */
 .title-main {
-    color: #9d3063;
-    font-weight: 700;
+    color: #1a2b4a;
+    font-weight: 800;
+    font-size: 1.8rem;
 }
 
 .subtitle-main {
-    color: #444;
-    font-size: 1.1rem;
+    color: #64748b;
+    font-size: 1.05rem;
 }
 
 /* Tarjetas de Bancos */
 .bank-card {
     width: 80px;
     height: 80px;
-    border-radius: 12px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     cursor: pointer;
 }
 
 .bank-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .bank-card img {
-    max-width: 70%;
+    max-width: 65%;
 }
 
 /* Colores de Fondo de Bancos */
@@ -55,61 +57,50 @@
 .selected-channel-banner {
     background-color: #742384;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Tarjeta de Información */
 .info-card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
     overflow: hidden;
 }
 
 .link-custom {
     color: #008494;
-    font-weight: 500;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.link-custom:hover {
+    color: #006b77;
 }
 
 .detail-list li {
     margin-bottom: 8px;
-    font-size: 0.95rem;
-    color: #333;
+    font-size: 0.92rem;
+    color: #334155;
     display: flex;
     align-items: flex-start;
 }
 
 .detail-list li i {
-    color: #e30613;
-    /* Rojo institucional */
-    font-size: 0.8rem;
+    color: #ec0000;
+    font-size: 0.75rem;
     margin-top: 5px;
     margin-right: 10px;
 }
 
-/* Botón flotante */
-.scroll-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #a00000;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 /* Banners de los bancos */
 .bank-banner {
-    height: 100px;
-    border-radius: 8px;
+    height: 90px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .bcp-banner {
@@ -120,84 +111,68 @@
     background: linear-gradient(to right, #5fc3e4, #7f7fd5);
 }
 
-.bank-banner img {
-    max-height: 40px;
-}
-
-/* Personalización del Acordeón */
-.custom-accordion .accordion-item {
-    border: 1px solid #ced4da !important;
-    border-radius: 8px !important;
-    overflow: hidden;
-}
-
-.custom-accordion .accordion-button {
-    background-color: white !important;
-    color: #333;
-    font-weight: 500;
-    padding: 1.2rem;
-    box-shadow: none !important;
-}
-
-/* Icono de la flecha en rojo y a la derecha */
-.custom-accordion .accordion-button::after {
-    filter: invert(13%) sepia(91%) saturate(5437%) hue-rotate(352deg) brightness(96%) contrast(106%);
-    /* Esto convierte el icono de Bootstrap a color rojo similar a tu imagen */
-}
-
-.custom-accordion .accordion-button:not(.collapsed) {
-    color: #000;
-    border-bottom: 1px solid #eee;
-}
-
-.custom-accordion .accordion-header i {
-    color: #666;
-    font-size: 1.2rem;
-}
-
-/* Botón flotante rojo inferior */
-.btn-float-up {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #8b0000;
-    color: white;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-/* Colores específicos de los nuevos banners */
 .interbank-banner {
     background-color: #00bf4b;
-    /* Verde característico de Interbank */
 }
 
 .kasnet-banner {
     background-color: #4c49b6;
-    /* Azul/Violeta de KasNet */
 }
 
-/* Ajuste fino para los iconos de los acordeones */
+.bank-banner img {
+    max-height: 36px;
+}
+
+/* Acordeón */
+.custom-accordion .accordion-item {
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.custom-accordion .accordion-button {
+    background-color: white !important;
+    color: #334155;
+    font-weight: 600;
+    padding: 1.1rem 1.25rem;
+    box-shadow: none !important;
+    transition: all 0.2s ease;
+}
+
+.custom-accordion .accordion-button:hover {
+    background-color: #f8fafc !important;
+}
+
+.custom-accordion .accordion-button::after {
+    filter: invert(13%) sepia(91%) saturate(5437%) hue-rotate(352deg) brightness(96%) contrast(106%);
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    color: #1e293b;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.custom-accordion .accordion-header i {
+    color: #64748b;
+    font-size: 1.15rem;
+}
+
 .custom-accordion .accordion-button i {
-    font-size: 1.25rem;
-    color: #555;
+    font-size: 1.15rem;
+    color: #64748b;
 }
 
-/* Estilo para el separador horizontal entre secciones */
+/* Separador */
 hr {
     border: 0;
-    border-top: 1px solid #dee2e6;
+    border-top: 1px solid #e2e8f0;
     width: 80%;
     margin: 0 auto;
 }
 
-/* Efecto hover suave en los items del acordeón */
+/* Hover en items del acordeón */
 .accordion-item:hover {
-    border-color: #adb5bd !important;
+    border-color: #cbd5e1 !important;
     transition: border-color 0.3s ease;
 }

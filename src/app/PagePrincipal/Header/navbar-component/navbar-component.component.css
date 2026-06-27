@@ -1,20 +1,17 @@
-/* Variables de color de marca */
 :host {
-    --surgir-red: #ec0000;
-    --surgir-dark: #2d3748;
-    --surgir-yellow: #ffcc00;
-    --surgir-red-hover: #c40000;
+    display: block;
 }
 
 /* Banner Superior */
 .top-banner {
-    background-color: var(--surgir-red);
+    background-color: var(--surgir-red, #ec0000);
     color: white;
     padding: 6px 0;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     font-weight: 500;
     z-index: 1040;
     position: relative;
+    letter-spacing: 0.3px;
 }
 
 .santander-logo {
@@ -22,13 +19,9 @@
     vertical-align: middle;
 }
 
-.unete-link {
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
-}
-
 .unete-link a {
     transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.25s ease;
+    font-size: 0.75rem;
 }
 
 .unete-link a:hover {
@@ -39,20 +32,16 @@
 /* Navbar Principal */
 .navbar {
     background-color: #ffffff !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
-                backdrop-filter 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
-                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
-                padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 18px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 16px 0;
 }
 
-/* Glassmorphism al hacer Scroll */
 .navbar-scrolled {
-    background-color: rgba(255, 255, 255, 0.85) !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px) !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+    background-color: rgba(255, 255, 255, 0.92) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
     padding: 10px 0;
 }
 
@@ -61,17 +50,18 @@
 }
 
 .navbar-brand:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
-/* Enlaces del Menú - Animación de Subrayado Deslizante */
+/* Enlaces del Menú */
 .nav-link {
-    color: var(--surgir-dark) !important;
-    font-weight: 700;
-    font-size: 0.95rem;
-    padding: 0.6rem 1rem !important;
+    color: #334155 !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem !important;
     position: relative;
     transition: color 0.25s ease;
+    letter-spacing: 0.1px;
 }
 
 .nav-link::after {
@@ -80,8 +70,8 @@
     bottom: 0;
     left: 10%;
     width: 80%;
-    height: 3px;
-    background-color: var(--surgir-red);
+    height: 2.5px;
+    background-color: var(--surgir-red, #ec0000);
     border-radius: 2px;
     transform: scaleX(0);
     transform-origin: center;
@@ -95,10 +85,10 @@
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--surgir-red) !important;
+    color: var(--surgir-red, #ec0000) !important;
 }
 
-/* Estilo interactivo para caret del dropdown */
+/* Dropdown caret */
 .dropdown-toggle::after {
     border: none;
     content: "\2304";
@@ -112,25 +102,25 @@
 
 .nav-item.dropdown:hover .dropdown-toggle::after {
     transform: translateY(2px) rotate(180deg);
-    color: var(--surgir-red);
+    color: var(--surgir-red, #ec0000);
 }
 
-/* Buscador Deslizable / Expandible */
+/* Buscador */
 .search-box-wrapper {
     background: rgba(0, 0, 0, 0.04);
     border-radius: 30px;
     padding: 2px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s;
     width: 38px;
     overflow: hidden;
 }
 
 .search-box-open {
-    width: 210px;
+    width: 220px;
     background: #ffffff;
-    border-color: var(--surgir-red);
-    box-shadow: 0 0 10px rgba(236, 0, 0, 0.1);
+    border-color: var(--surgir-red, #ec0000);
+    box-shadow: 0 0 12px rgba(236, 0, 0, 0.1);
 }
 
 .search-input {
@@ -146,7 +136,7 @@
 }
 
 .search-box-open .search-input {
-    width: 160px;
+    width: 170px;
     opacity: 1;
 }
 
@@ -172,19 +162,19 @@
 }
 
 .search-box-open .search-svg {
-    fill: var(--surgir-red);
+    fill: var(--surgir-red, #ec0000);
     transform: scale(0.95);
 }
 
-/* Mega Menú Rediseñado Premium */
+/* Mega Menú */
 .nav-item.position-static .dropdown-menu {
     top: 100%;
     left: 0;
     right: 0;
     margin-top: 2px;
-    border-radius: 0 0 24px 24px !important;
+    border-radius: 0 0 20px 20px !important;
     border: 1px solid rgba(0, 0, 0, 0.05) !important;
-    background: rgba(255, 255, 255, 0.96) !important;
+    background: rgba(255, 255, 255, 0.97) !important;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
@@ -203,7 +193,6 @@
     visibility: visible;
 }
 
-/* Animaciones del Puente Invisible */
 @media (min-width: 992px) {
     .nav-item.dropdown > .dropdown-menu::before {
         content: '';
@@ -216,7 +205,7 @@
     }
 }
 
-/* Enlaces del Mega Menú */
+/* Mega Menu Links */
 .mega-links li {
     margin-bottom: 10px;
     position: relative;
@@ -226,18 +215,18 @@
 
 .mega-links li a {
     text-decoration: none;
-    color: #4a5568;
-    font-size: 0.9rem;
-    font-weight: 600;
+    color: #475569;
+    font-size: 0.88rem;
+    font-weight: 500;
     display: inline-flex;
     align-items: center;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .mega-links li a::before {
-    content: '→';
+    content: '\2192';
     margin-right: 6px;
-    color: var(--surgir-red);
+    color: var(--surgir-red, #ec0000);
     opacity: 0;
     transform: translateX(-5px);
     transition: transform 0.2s ease, opacity 0.2s ease;
@@ -249,7 +238,7 @@
 }
 
 .mega-links li:hover a {
-    color: var(--surgir-red);
+    color: var(--surgir-red, #ec0000);
 }
 
 .mega-links li:hover a::before {
@@ -257,15 +246,8 @@
     transform: translateX(0);
 }
 
-/* Estilos de las Columnas de Producto */
-.mega-column-title {
-    font-weight: 800 !important;
-    color: var(--surgir-red) !important;
-    letter-spacing: 0.5px;
-}
-
 .col-md-3.border-end {
-    border-right-color: rgba(0, 0, 0, 0.05) !important;
+    border-right-color: rgba(0, 0, 0, 0.06) !important;
 }
 
 /* Responsivo */
@@ -276,15 +258,15 @@
 
     .navbar-collapse {
         background-color: white;
-        border-radius: 12px;
-        padding: 15px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-        margin-top: 10px;
+        border-radius: 16px;
+        padding: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        margin-top: 12px;
     }
 
     .nav-link {
-        padding: 12px 6px !important;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+        padding: 12px 8px !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.03);
     }
 
     .nav-link::after {

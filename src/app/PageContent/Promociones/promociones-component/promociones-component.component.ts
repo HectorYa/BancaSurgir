@@ -13,13 +13,13 @@ export class PromocionesComponentComponent {
     {
       titulo: 'Campaña Actualización de Datos SURGIR 2026',
       vigencia: '15 de mayo de 2026 - 10 de julio de 2026',
-      imagen: 'assets/promo1.jpg',
+      imagen: 'assets/img/promo1.png',
       btnPrincipal: 'Participar'
     },
     {
       titulo: 'Campaña Decidir bien, te paga más',
       vigencia: '15 de abril de 2026 - 31 de mayo de 2026',
-      imagen: 'assets/promo2.jpg',
+      imagen: 'assets/img/promo2.png',
       btnPrincipal: 'Abre tu Depósito'
     },
     // ... más promociones

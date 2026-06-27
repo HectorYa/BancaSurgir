@@ -1,22 +1,20 @@
 :host {
-    --santander-red: #ec0000;
-    --text-gray: #666;
-    --title-gray: #444;
+    display: block;
 }
 
 .footer-container {
     background-color: #fff;
-    color: var(--text-gray);
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 0.9rem;
-    border-top: 1px solid #eee;
+    color: #64748b;
+    font-size: 0.88rem;
+    border-top: 1px solid #f1f5f9;
 }
 
 .footer-title {
-    color: var(--title-gray);
-    font-size: 1rem;
+    color: #1e293b;
+    font-size: 0.95rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.01em;
 }
 
 .footer-links li {
@@ -24,57 +22,67 @@
 }
 
 .footer-links a {
-    color: var(--text-gray);
+    color: #64748b;
     text-decoration: none;
-    transition: color 0.2s;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    font-size: 0.85rem;
 }
 
 .footer-links a:hover {
-    color: var(--santander-red);
+    color: var(--santander-red, #ec0000);
+    padding-left: 4px;
 }
 
 .schedule {
-    font-size: 0.85rem;
-    color: var(--text-gray);
+    font-size: 0.82rem;
+    color: #64748b;
 }
 
 .phone-number {
-    color: var(--title-gray);
+    color: #1e293b;
     font-weight: 800;
     font-size: 1.5rem;
+    letter-spacing: -0.02em;
 }
 
 /* Sección Institucional */
 .footer-divider {
-    opacity: 0.1;
+    opacity: 0.08;
     margin: 0;
+    border-top: 1px solid #e2e8f0;
 }
 
 .institutional-links a {
-    color: var(--text-gray);
-    font-size: 0.85rem;
+    color: #94a3b8;
+    font-size: 0.8rem;
     text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.institutional-links a:hover {
+    color: var(--santander-red, #ec0000);
 }
 
 .institutional-links li {
-    border-color: #ddd !important;
+    border-color: #e2e8f0 !important;
 }
 
 /* Franja Roja */
 .legal-bar {
-    background-color: var(--santander-red);
+    background-color: var(--santander-red, #ec0000);
     color: white;
     font-size: 0.75rem;
 }
 
 .legal-text p {
-    line-height: 1.4;
+    line-height: 1.5;
+    opacity: 0.95;
 }
 
 .social-icon {
-    width: 32px;
-    height: 32px;
-    border: 2px solid white;
+    width: 34px;
+    height: 34px;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -82,20 +90,29 @@
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
 }
 
 .social-icon:hover {
     background: white;
-    color: var(--santander-red);
+    color: var(--santander-red, #ec0000);
+    border-color: white;
+    transform: translateY(-2px);
 }
 
 /* Botón Volver Arriba */
 .btn-back-to-top {
-    color: var(--title-gray);
+    color: #475569;
     font-weight: 600;
+    font-size: 0.88rem;
     display: inline-flex;
     align-items: center;
+    transition: color 0.2s ease;
+}
+
+.btn-back-to-top:hover {
+    color: var(--santander-red, #ec0000);
 }
 
 /* Responsividad */
