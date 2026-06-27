@@ -1,33 +1,244 @@
+/* =============================================
+   SURGIR - Global Design System
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 /* VARIABLES */
 :root {
-    /* MODO CLARO TOTAL */
+    /* Brand Colors */
+    --surgir-red: #ec0000;
+    --surgir-red-hover: #c40000;
+    --surgir-red-light: rgba(236, 0, 0, 0.08);
+    --surgir-yellow: #ffcc00;
+    --surgir-dark-blue: #1a2b4a;
+    --surgir-purple: #6b21a8;
+
+    /* Neutral Palette */
     --bg-color: #f8fafc;
     --bg-gradient: radial-gradient(circle at center, #ffffff 0%, #f1f5f9 100%);
     --text-main: #1e293b;
-    --card-bg: rgba(255, 255, 255, 0.9);
-    /* Un poco de transparencia */
+    --text-muted: #64748b;
+    --card-bg: rgba(255, 255, 255, 0.95);
     --card-border: #e2e8f0;
     --glow: rgba(0, 0, 0, 0.05);
+
+    /* Input */
+    --input-bg: #ffffff;
+    --input-border: #cbd5e1;
+    --muted-text: #64748b;
+    --accent-red: #ec0000;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+    --shadow-lg: 0 10px 40px rgba(0,0,0,0.10);
+    --shadow-red: 0 8px 24px rgba(236,0,0,0.18);
+
+    /* Radius */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+    --radius-pill: 999px;
+
+    /* Transitions */
+    --transition-base: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 [data-theme='dark'] {
-    /* MODO OSCURO TOTAL (Fiel a tu imagen) */
     --bg-color: #0f172a;
-    /* Este gradiente imita las luces sutiles de la imagen original */
     --bg-gradient: radial-gradient(circle at 80% 20%, #1e293b 0%, #0f172a 100%);
     --text-main: #ffffff;
     --card-bg: #1e293b;
     --card-border: #334155;
-    --glow: rgba(236, 0, 0, 0.4);
-    /* El resplandor rojo de la imagen */
+    --glow: rgba(236, 0, 0, 0.45);
+    --input-bg: #0f172a;
+    --input-border: #334155;
+    --muted-text: #94a3b8;
 }
 
-/* APLICACIÓN AL BODY */
-html,
-body {
-    height: 100%;
+/* BASE */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
     margin: 0;
-    background: var(--bg-color);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg-gradient, var(--bg-color));
+    background-attachment: fixed;
     color: var(--text-main);
     transition: background 0.3s ease, color 0.3s ease;
+    -webkit-font-smoothing: antialiased;
 }
+
+/* =============================================
+   UTILITY CLASSES - SURGIR
+   ============================================= */
+
+/* Colors */
+.text-surgir-red    { color: var(--surgir-red) !important; }
+.text-dark-blue     { color: var(--surgir-dark-blue) !important; }
+.text-red           { color: var(--surgir-red) !important; }
+.bg-red             { background-color: var(--surgir-red) !important; }
+.bg-surgir-light    { background-color: #fff5f5 !important; }
+.bg-surgir-gray     { background-color: #f8fafc !important; }
+
+/* Buttons */
+.btn-red-surgir,
+.btn-surgir-red {
+    background-color: var(--surgir-red);
+    color: #ffffff !important;
+    border: none;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    transition: background-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+    box-shadow: 0 4px 14px rgba(236,0,0,0.3);
+}
+
+.btn-red-surgir:hover,
+.btn-surgir-red:hover {
+    background-color: var(--surgir-red-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-red);
+    color: #ffffff !important;
+}
+
+.btn-red-surgir:active,
+.btn-surgir-red:active {
+    transform: translateY(0);
+}
+
+.btn-outline-surgir {
+    border: 2px solid var(--surgir-red);
+    color: var(--surgir-red);
+    background: transparent;
+    font-weight: 700;
+    transition: all var(--transition-base);
+}
+
+.btn-outline-surgir:hover {
+    background-color: var(--surgir-red);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-red);
+}
+
+/* Sections */
+.section-py { padding: 80px 0; }
+.section-py-sm { padding: 48px 0; }
+
+/* Hero gradient overlay */
+.hero-overlay {
+    background: linear-gradient(135deg, rgba(26,43,74,0.92) 0%, rgba(236,0,0,0.15) 100%);
+}
+
+/* Cards */
+.surgir-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.surgir-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Icon Circles */
+.icon-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--surgir-red-light);
+    color: var(--surgir-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+/* Step Numbers */
+.step-number {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 50%;
+    background: var(--surgir-red);
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    box-shadow: 0 4px 12px rgba(236,0,0,0.25);
+}
+
+/* Custom List */
+.custom-bullet-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.custom-bullet-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--surgir-red);
+}
+
+/* Section Titles */
+.section-title {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+    color: var(--surgir-dark-blue);
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Badge / Tag */
+.surgir-tag {
+    display: inline-block;
+    background: var(--surgir-red-light);
+    color: var(--surgir-red);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+/* Page fade-in animation */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadein {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Responsive utilities */
+.w-fit { width: fit-content; }

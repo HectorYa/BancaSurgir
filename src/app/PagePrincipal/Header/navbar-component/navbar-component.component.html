@@ -11,14 +11,15 @@
             </svg>
         </div>
         <div class="unete-link">
-            <a href="#" class="text-white text-decoration-none fw-bold">Únete a SURGIR</a>
+            <a href="http://localhost:5173/" class="btn btn-light btn-sm fw-bold rounded-pill px-3 py-1 shadow-sm"
+                style="font-size: 0.75rem; color: var(--surgir-red); line-height: 1;">Únete a SURGIR</a>
         </div>
     </div>
 </div>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" [class.navbar-scrolled]="isScrolled">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" routerLink="/">
             <svg width="140" height="40" viewBox="0 0 160 50" xmlns="http://www.w3.org/2000/svg">
                 <text x="0" y="38" fill="#ec0000" font-family="Arial Black, sans-serif" font-size="34">SURGIR</text>
                 <g fill="#ffcc00">
@@ -35,11 +36,12 @@
 
         <div class="collapse navbar-collapse" id="navSurgir">
             <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#">Nosotros</a>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/nosotros" routerLinkActive="active">Nosotros</a>
                 </li>
                 <li class="nav-item dropdown position-static">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        data-bs-display="static">
                         Productos
                     </a>
                     <div class="dropdown-menu w-100 border-0 shadow-lg m-0 p-0">
@@ -50,7 +52,8 @@
                                     <div class="p-3 text-center bg-light rounded-3 h-100">
                                         <h6 class="fw-bold">¡Actualiza tus datos y participa por S/ 500!</h6>
                                         <p class="small">Serán 20 ganadores</p>
-                                        <button class="btn btn-danger btn-sm rounded-pill px-4">Participar ahora</button>
+                                        <button class="btn btn-danger btn-sm rounded-pill px-4">Participar
+                                            ahora</button>
                                         <img src="assets/promo-mini.png" class="img-fluid mt-3 rounded" alt="Promo">
                                     </div>
                                 </div>
@@ -64,10 +67,10 @@
                                             </div>
                                             <hr class="my-2">
                                             <ul class="list-unstyled mega-links">
-                                                <li><a href="#">Depósito a Plazo Fijo</a></li>
-                                                <li><a href="#">Depósito a Plazo Fijo Flexible</a></li>
-                                                <li><a href="#">Cuenta Gold Select</a></li>
-                                                <li><a href="#">Cuenta de Ahorros</a></li>
+                                                <li><a routerLink="/productos/plazo-fijo">Depósito a Plazo Fijo</a></li>
+                                                <li><a routerLink="/productos">Depósito a Plazo Fijo Flexible</a></li>
+                                                <li><a routerLink="/productos">Cuenta Gold Select</a></li>
+                                                <li><a routerLink="/productos">Cuenta de Ahorros</a></li>
                                             </ul>
                                         </div>
 
@@ -78,9 +81,12 @@
                                             </div>
                                             <hr class="my-2">
                                             <ul class="list-unstyled mega-links">
-                                                <li><a href="#">Crédito Mujeres Unidas</a></li>
-                                                <li><a href="#">Crédito Prospera</a></li>
-                                                <li><a href="#">Crédito Construyendo Sueños</a></li>
+                                                <li><a routerLink="/productos/credito-mujeres">Crédito Mujeres
+                                                        Unidas</a></li>
+                                                <li><a routerLink="/productos/credito-prospera">Crédito Prospera</a>
+                                                </li>
+                                                <li><a routerLink="/productos/credito-construyendo">Crédito Construyendo
+                                                        Sueños</a></li>
                                             </ul>
                                         </div>
 
@@ -91,9 +97,9 @@
                                             </div>
                                             <hr class="my-2">
                                             <ul class="list-unstyled mega-links">
-                                                <li><a href="#">Súper Seguro</a></li>
-                                                <li><a href="#">Seguro Multirriesgo</a></li>
-                                                <li><a href="#">Seguro de Desgravamen</a></li>
+                                                <li><a routerLink="/ayuda">Súper Seguro</a></li>
+                                                <li><a routerLink="/ayuda">Seguro Multirriesgo</a></li>
+                                                <li><a routerLink="/ayuda">Seguro de Desgravamen</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -103,22 +109,25 @@
                         </div>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#">Canales de Pago</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#">Ayuda y contacto</a>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/canal-pago" routerLinkActive="active">Canales de Pago</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Promociones</a>
+                    <a class="nav-link" routerLink="/ayuda" routerLinkActive="active">Ayuda y contacto</a>
                 </li>
-                <li class="nav-item ms-lg-3">
-                    <a class="nav-link search-btn" href="#">
-                        <svg width="20" height="20" fill="#444" viewBox="0 0 24 24">
-                            <path
-                                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
-                        </svg>
-                    </a>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/promociones" routerLinkActive="active">Promociones</a>
+                </li>
+                <li class="nav-item ms-lg-3 d-flex align-items-center position-relative">
+                    <div class="search-box-wrapper d-flex align-items-center" [class.search-box-open]="isSearchOpen">
+                        <input type="text" class="form-control search-input" placeholder="Buscar en SURGIR...">
+                        <button class="btn search-toggle-btn p-1" (click)="toggleSearch($event)">
+                            <svg width="20" height="20" fill="#444" viewBox="0 0 24 24" class="search-svg">
+                                <path
+                                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                            </svg>
+                        </button>
+                    </div>
                 </li>
             </ul>
         </div>

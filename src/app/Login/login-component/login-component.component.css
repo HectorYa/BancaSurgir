@@ -1,54 +1,180 @@
+:host {
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+}
+
 .login-container {
     min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
-    /* Aseguramos que el fondo del contenedor no tape al del body */
     background: transparent;
+    padding: 2rem 0;
+}
+
+.btn-regresar {
+    color: var(--text-main);
+    transition: transform 0.2s ease, color 0.2s ease;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.btn-regresar:hover {
+    transform: translateX(-4px);
+    color: var(--accent-red);
+    opacity: 1;
+}
+
+.theme-toggle-btn {
+    color: var(--text-main);
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+    opacity: 1;
+    color: var(--text-main);
+}
+
+.text-theme {
+    color: var(--text-main);
+}
+
+.banner-title {
+    color: var(--text-main);
+    line-height: 1.2;
+}
+
+.banner-subtitle {
+    color: var(--text-main);
+    font-size: 1.1rem;
+}
+
+.bg-glass {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.border-glass {
+    border: 1px solid var(--card-border) !important;
+}
+
+.feature-item {
+    transition: transform 0.2s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-2px);
+}
+
+.feature-title {
+    color: var(--text-main);
+}
+
+.feature-desc {
+    color: var(--muted-text);
 }
 
 .login-card {
     background-color: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 1.2rem;
-    /* El brillo rojo que rodea la tarjeta en la imagen */
-    box-shadow: 0 0 60px var(--glow) !important;
+    border: 1px solid var(--card-border) !important;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 40px var(--glow) !important;
     backdrop-filter: blur(10px);
-    /* Efecto moderno de cristal */
+    -webkit-backdrop-filter: blur(10px);
+    transition: box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+    box-shadow: 0 25px 50px var(--glow) !important;
+}
+
+.login-card-title {
+    color: var(--text-main);
+}
+
+.login-card-subtitle {
+    color: var(--muted-text);
+}
+
+.text-label {
+    color: var(--text-main);
+    opacity: 0.8;
+}
+
+.custom-input-group-text {
+    border: 1px solid var(--input-border) !important;
+    color: var(--muted-text) !important;
+    padding-left: 1.2rem;
+    border-radius: 0.75rem 0 0 0.75rem !important;
 }
 
 .custom-input {
     background-color: var(--input-bg) !important;
     border: 1px solid var(--input-border) !important;
     color: var(--text-main) !important;
-    padding: 0.8rem 1rem;
-    border-radius: 0.75rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0 0.75rem 0.75rem 0 !important;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
 
-    &::placeholder {
-        color: var(--muted-text);
-        opacity: 0.5;
-    }
+.custom-input:focus {
+    border-color: var(--accent-red) !important;
+    box-shadow: 0 0 0 3px rgba(236, 0, 0, 0.15) !important;
+}
+
+/* Alinear borde de input group al enfocarse */
+.input-group:focus-within .custom-input-group-text {
+    border-color: var(--accent-red) !important;
 }
 
 .btn-outline-custom {
     border: 1px solid var(--input-border);
     color: var(--text-main);
-    background-color: var(--card-bg);
+    background-color: transparent;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    font-weight: 500;
+}
 
-    &:hover {
-        background-color: var(--input-bg);
-    }
+.btn-outline-custom:hover {
+    background-color: var(--input-bg);
+    border-color: var(--accent-red);
 }
 
 .badge-number {
     background-color: var(--accent-red);
     color: white;
-    width: 24px;
-    height: 24px;
-    border-radius: 6px;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
-    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(236, 0, 0, 0.2);
+}
+
+.separator-container {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separator-line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--card-border);
+    z-index: 1;
+}
+
+.separator-text {
+    position: relative;
+    background-color: var(--card-bg);
+    z-index: 2;
+    padding: 0 10px;
 }

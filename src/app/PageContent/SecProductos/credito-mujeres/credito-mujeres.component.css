@@ -1,0 +1,49 @@
+:host { display: block; }
+
+.hero-visual { position: relative; }
+
+.blob-shape {
+    position: absolute;
+    width: 350px; height: 350px;
+    background: radial-gradient(circle, rgba(236,0,0,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 0;
+    animation: blobPulse 4s ease-in-out infinite;
+}
+
+@keyframes blobPulse {
+    0%, 100% { transform: translate(-50%,-50%) scale(1); }
+    50% { transform: translate(-50%,-50%) scale(1.08); }
+}
+
+.hero-visual img { position: relative; z-index: 1; }
+
+.floating-stat-card {
+    position: absolute;
+    background: white;
+    border-radius: 16px;
+    padding: 14px 18px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    z-index: 2;
+    animation: floatCard 3s ease-in-out infinite;
+}
+
+.stat-1 { bottom: 20px; left: 0; }
+
+@keyframes floatCard {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.step-item {
+    padding: 16px;
+    border-radius: 12px;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.step-item:hover {
+    background: rgba(236,0,0,0.04);
+    transform: translateX(4px);
+}
