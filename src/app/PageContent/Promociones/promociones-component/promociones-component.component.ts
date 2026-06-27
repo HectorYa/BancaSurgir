@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-promociones-component',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './promociones-component.component.html',
   styleUrl: './promociones-component.component.css'
 })
